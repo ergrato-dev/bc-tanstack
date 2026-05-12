@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 460" width="860" height="460"
+  role="img" aria-label="Pipeline del toolchain moderno: código fuente pasa por Vite, ESLint, Vitest y sale como build optimizado" font-family="Inter, Roboto, system-ui, sans-serif">
+
+  <!-- Fondo -->
+  <rect width="860" height="460" fill="#0F172A"/>
+
+  <!-- Título -->
+  <text x="430" y="28" text-anchor="middle" fill="#F1F5F9" font-size="16" font-weight="700">Toolchain Moderno — Pipeline de Desarrollo</text>
+  <text x="430" y="46" text-anchor="middle" fill="#64748B" font-size="11">Cada herramienta actúa en una fase distinta del ciclo de desarrollo</text>
+
+  <!-- ===== FASES (columnas) ===== -->
+  <!-- Fase 1: ESCRIBIR -->
+  <rect x="60" y="58" width="140" height="360" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="130" y="78" text-anchor="middle" fill="#94A3B8" font-size="11" font-weight="700">ESCRIBIR</text>
+
+  <!-- Fase 2: FORMATEAR -->
+  <rect x="220" y="58" width="140" height="360" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="290" y="78" text-anchor="middle" fill="#94A3B8" font-size="11" font-weight="700">FORMATEAR</text>
+
+  <!-- Fase 3: ANALIZAR -->
+  <rect x="380" y="58" width="140" height="360" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="450" y="78" text-anchor="middle" fill="#94A3B8" font-size="11" font-weight="700">ANALIZAR</text>
+
+  <!-- Fase 4: TESTEAR -->
+  <rect x="540" y="58" width="140" height="360" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="610" y="78" text-anchor="middle" fill="#94A3B8" font-size="11" font-weight="700">TESTEAR</text>
+
+  <!-- Fase 5: COMPILAR -->
+  <rect x="700" y="58" width="140" height="360" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="770" y="78" text-anchor="middle" fill="#94A3B8" font-size="11" font-weight="700">COMPILAR</text>
+
+  <!-- Flechas entre fases -->
+  <polygon points="207,240 220,234 220,246" fill="#334155"/>
+  <polygon points="367,240 380,234 380,246" fill="#334155"/>
+  <polygon points="527,240 540,234 540,246" fill="#334155"/>
+  <polygon points="687,240 700,234 700,246" fill="#334155"/>
+
+  <!-- ===== CARRIL: CÓDIGO FUENTE ===== -->
+  <!-- Nodo fuente en columna 1 -->
+  <rect x="72" y="100" width="116" height="50" rx="6" fill="#1C2A3A" stroke="#3B82F6" stroke-width="2"/>
+  <text x="130" y="122" text-anchor="middle" fill="#93C5FD" font-size="10" font-weight="700">src/</text>
+  <text x="130" y="138" text-anchor="middle" fill="#64748B" font-size="9">.ts · .tsx · .css</text>
+
+  <!-- ===== CARRIL: PRETTIER ===== -->
+  <rect x="232" y="100" width="116" height="50" rx="6" fill="#1C1A10" stroke="#F59E0B" stroke-width="2"/>
+  <text x="290" y="118" text-anchor="middle" fill="#FCD34D" font-size="10" font-weight="700">Prettier</text>
+  <text x="290" y="132" text-anchor="middle" fill="#64748B" font-size="9">formatea al guardar</text>
+  <text x="290" y="144" text-anchor="middle" fill="#64748B" font-size="9">pnpm prettier --check</text>
+  <!-- Badge versión -->
+  <rect x="314" y="102" width="30" height="14" rx="3" fill="#3B1F00"/>
+  <text x="329" y="113" text-anchor="middle" fill="#F59E0B" font-size="8">3.5.3</text>
+
+  <!-- ===== CARRIL: ESLINT ===== -->
+  <rect x="392" y="100" width="116" height="50" rx="6" fill="#1A1030" stroke="#A78BFA" stroke-width="2"/>
+  <text x="450" y="118" text-anchor="middle" fill="#C4B5FD" font-size="10" font-weight="700">ESLint</text>
+  <text x="450" y="132" text-anchor="middle" fill="#64748B" font-size="9">analiza malas prácticas</text>
+  <text x="450" y="144" text-anchor="middle" fill="#64748B" font-size="9">pnpm lint</text>
+  <rect x="474" y="102" width="30" height="14" rx="3" fill="#200C50"/>
+  <text x="489" y="113" text-anchor="middle" fill="#A78BFA" font-size="8">9.25.1</text>
+
+  <!-- ===== CARRIL: VITEST ===== -->
+  <rect x="552" y="100" width="116" height="50" rx="6" fill="#0C1A0C" stroke="#22C55E" stroke-width="2"/>
+  <text x="610" y="118" text-anchor="middle" fill="#86EFAC" font-size="10" font-weight="700">Vitest</text>
+  <text x="610" y="132" text-anchor="middle" fill="#64748B" font-size="9">ejecuta tests + cobertura</text>
+  <text x="610" y="144" text-anchor="middle" fill="#64748B" font-size="9">pnpm test:coverage</text>
+  <rect x="634" y="102" width="30" height="14" rx="3" fill="#021002"/>
+  <text x="649" y="113" text-anchor="middle" fill="#22C55E" font-size="8">3.1.3</text>
+
+  <!-- ===== CARRIL: VITE BUILD ===== -->
+  <rect x="712" y="100" width="116" height="50" rx="6" fill="#1A0A1A" stroke="#EC4899" stroke-width="2"/>
+  <text x="770" y="118" text-anchor="middle" fill="#F9A8D4" font-size="10" font-weight="700">Vite build</text>
+  <text x="770" y="132" text-anchor="middle" fill="#64748B" font-size="9">bundle optimizado</text>
+  <text x="770" y="144" text-anchor="middle" fill="#64748B" font-size="9">pnpm build</text>
+  <rect x="794" y="102" width="30" height="14" rx="3" fill="#3B0022"/>
+  <text x="809" y="113" text-anchor="middle" fill="#EC4899" font-size="8">6.3.5</text>
+
+  <!-- ===== CARRIL: PNPM (gestor transversal) ===== -->
+  <line x1="130" y1="58" x2="130" y2="418" stroke="#334155" stroke-width="0.5" stroke-dasharray="2,4"/>
+  <!-- pnpm aparece en todas las fases — barra lateral -->
+  <rect x="72" y="170" width="116" height="38" rx="5" fill="#0F1F2E" stroke="#0EA5E9" stroke-width="1.5"/>
+  <text x="130" y="186" text-anchor="middle" fill="#7DD3FC" font-size="9" font-weight="700">pnpm (gestor)</text>
+  <text x="130" y="200" text-anchor="middle" fill="#64748B" font-size="8">save-exact=true · audit</text>
+
+  <!-- TypeScript — transversal entre ESCRIBIR y COMPILAR -->
+  <rect x="72" y="228" width="116" height="38" rx="5" fill="#1C2A3A" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="130" y="244" text-anchor="middle" fill="#93C5FD" font-size="9" font-weight="700">TypeScript 5.8.3</text>
+  <text x="130" y="258" text-anchor="middle" fill="#64748B" font-size="8">pnpm typecheck</text>
+
+  <!-- ===== GATE: check antes de commit ===== -->
+  <!-- Línea horizontal gate -->
+  <line x1="72" y1="300" x2="828" y2="300" stroke="#334155" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="430" y="296" text-anchor="middle" fill="#64748B" font-size="9">── Gate: antes de cada commit ──</text>
+
+  <!-- Checks en cada columna -->
+  <!-- pnpm typecheck -->
+  <rect x="72" y="308" width="116" height="30" rx="5" fill="#0C1520" stroke="#3B82F6" stroke-width="1"/>
+  <text x="130" y="328" text-anchor="middle" fill="#93C5FD" font-size="9">✓ pnpm typecheck</text>
+
+  <!-- pnpm prettier -->
+  <rect x="232" y="308" width="116" height="30" rx="5" fill="#130E00" stroke="#F59E0B" stroke-width="1"/>
+  <text x="290" y="328" text-anchor="middle" fill="#FCD34D" font-size="9">✓ prettier --check</text>
+
+  <!-- pnpm lint -->
+  <rect x="392" y="308" width="116" height="30" rx="5" fill="#100820" stroke="#A78BFA" stroke-width="1"/>
+  <text x="450" y="328" text-anchor="middle" fill="#C4B5FD" font-size="9">✓ pnpm lint</text>
+
+  <!-- pnpm test:coverage -->
+  <rect x="552" y="308" width="116" height="30" rx="5" fill="#021002" stroke="#22C55E" stroke-width="1"/>
+  <text x="610" y="328" text-anchor="middle" fill="#86EFAC" font-size="9">✓ coverage ≥ 85%</text>
+
+  <!-- pnpm audit -->
+  <rect x="712" y="308" width="116" height="30" rx="5" fill="#150010" stroke="#EC4899" stroke-width="1"/>
+  <text x="770" y="328" text-anchor="middle" fill="#F9A8D4" font-size="9">✓ pnpm audit</text>
+
+  <!-- ===== RESULTADO FINAL ===== -->
+  <rect x="200" y="358" width="460" height="46" rx="8" fill="#0C1520" stroke="#22C55E" stroke-width="2"/>
+  <text x="430" y="378" text-anchor="middle" fill="#86EFAC" font-size="13" font-weight="700">✅ dist/ — build listo para producción</text>
+  <text x="430" y="396" text-anchor="middle" fill="#64748B" font-size="10">sin errores de tipo · sin warnings de lint · cobertura ≥ 85% · sin CVEs</text>
+
+  <!-- Flechas hacia resultado -->
+  <line x1="770" y1="340" x2="660" y2="358" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="610" y1="340" x2="560" y2="358" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- Leyenda -->
+  <rect x="60" y="418" width="740" height="22" fill="#1E293B" rx="4"/>
+  <rect x="80" y="425" width="10" height="10" rx="2" fill="#3B82F6"/>
+  <text x="96" y="435" fill="#94A3B8" font-size="9">TypeScript / Vite</text>
+  <rect x="200" y="425" width="10" height="10" rx="2" fill="#F59E0B"/>
+  <text x="216" y="435" fill="#94A3B8" font-size="9">Prettier</text>
+  <rect x="290" y="425" width="10" height="10" rx="2" fill="#A78BFA"/>
+  <text x="306" y="435" fill="#94A3B8" font-size="9">ESLint</text>
+  <rect x="370" y="425" width="10" height="10" rx="2" fill="#22C55E"/>
+  <text x="386" y="435" fill="#94A3B8" font-size="9">Vitest</text>
+  <rect x="440" y="425" width="10" height="10" rx="2" fill="#EC4899"/>
+  <text x="456" y="435" fill="#94A3B8" font-size="9">Vite build</text>
+  <rect x="530" y="425" width="10" height="10" rx="2" fill="#0EA5E9"/>
+  <text x="546" y="435" fill="#94A3B8" font-size="9">pnpm</text>
+  <text x="760" y="435" fill="#64748B" font-size="9">© Semana 03</text>
+</svg>
