@@ -1,0 +1,17 @@
+{
+  "name": "proyecto-semana-01",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --max-warnings 0"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.26.0",
+    "eslint": "9.26.0",
+    "globals": "16.1.0",
+    "typescript": "5.8.3",
+    "typescript-eslint": "8.32.1"
+  }
+}
