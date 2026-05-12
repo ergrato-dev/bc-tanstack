@@ -1,125 +1,94 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" font-family="Inter, Roboto, system-ui, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420" width="860" height="420"
+  role="img" aria-label="Ciclo de vida de hooks React: MOUNT → RENDER → EFFECT → CLEANUP → UNMOUNT" font-family="Inter, Roboto, system-ui, sans-serif">
+
   <!-- Fondo -->
-  <rect width="900" height="520" fill="#0F172A" rx="12"/>
+  <rect width="860" height="420" fill="#0F172A"/>
 
   <!-- Título -->
-  <text x="450" y="42" text-anchor="middle" fill="#F1F5F9" font-size="18" font-weight="700">Ciclo de Vida de Hooks en React 19</text>
+  <text x="430" y="32" text-anchor="middle" fill="#F1F5F9" font-size="17" font-weight="700">
+    Ciclo de Vida de los Hooks React
+  </text>
+  <text x="430" y="50" text-anchor="middle" fill="#64748B" font-size="11">
+    Cada hook se activa en una fase específica del ciclo
+  </text>
 
-  <!-- ======= COLUMNAS (3) ======= -->
+  <!-- ===== LÍNEA DE TIEMPO (eje central) ===== -->
+  <line x1="60" y1="175" x2="800" y2="175" stroke="#334155" stroke-width="2"/>
+  <!-- Flecha final -->
+  <polygon points="800,175 790,170 790,180" fill="#64748B"/>
 
-  <!-- Col 1: useState -->
-  <rect x="30" y="70" width="250" height="400" fill="#1E293B" rx="8" stroke="#334155" stroke-width="1"/>
-  <rect x="30" y="70" width="250" height="36" fill="#334155" rx="8"/>
-  <rect x="30" y="94" width="250" height="12" fill="#334155"/>
-  <text x="155" y="94" text-anchor="middle" fill="#93C5FD" font-size="13" font-weight="700">useState</text>
+  <!-- ===== NODOS del ciclo ===== -->
+  <!-- 1. MOUNT -->
+  <circle cx="100" cy="175" r="28" fill="#1E293B" stroke="#3B82F6" stroke-width="2.5"/>
+  <text x="100" y="172" text-anchor="middle" fill="#93C5FD" font-size="9" font-weight="700">MOUNT</text>
+  <text x="100" y="184" text-anchor="middle" fill="#64748B" font-size="8">inicial</text>
 
-  <!-- Render inicial -->
-  <rect x="50" y="120" width="210" height="44" fill="#0F172A" rx="6" stroke="#1D4ED8" stroke-width="1"/>
-  <text x="155" y="137" text-anchor="middle" fill="#93C5FD" font-size="11" font-weight="600">Render inicial</text>
-  <text x="155" y="153" text-anchor="middle" fill="#64748B" font-size="10">const [x, setX] = useState(0)</text>
+  <!-- 2. RENDER -->
+  <circle cx="230" cy="175" r="28" fill="#1E293B" stroke="#A78BFA" stroke-width="2.5"/>
+  <text x="230" y="172" text-anchor="middle" fill="#C4B5FD" font-size="9" font-weight="700">RENDER</text>
+  <text x="230" y="184" text-anchor="middle" fill="#64748B" font-size="8">JSX → DOM</text>
 
-  <!-- Flecha abajo -->
-  <line x1="155" y1="164" x2="155" y2="188" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- 3. EFFECT -->
+  <circle cx="370" cy="175" r="28" fill="#1E293B" stroke="#22C55E" stroke-width="2.5"/>
+  <text x="370" y="172" text-anchor="middle" fill="#86EFAC" font-size="9" font-weight="700">EFFECT</text>
+  <text x="370" y="184" text-anchor="middle" fill="#64748B" font-size="8">post-paint</text>
 
-  <!-- setX(newValue) -->
-  <rect x="50" y="188" width="210" height="44" fill="#0F172A" rx="6" stroke="#1D4ED8" stroke-width="1"/>
-  <text x="155" y="205" text-anchor="middle" fill="#93C5FD" font-size="11" font-weight="600">Actualizar estado</text>
-  <text x="155" y="221" text-anchor="middle" fill="#64748B" font-size="10">setX(prev =&gt; prev + 1)</text>
+  <!-- 4. CLEANUP -->
+  <circle cx="510" cy="175" r="28" fill="#1E293B" stroke="#F59E0B" stroke-width="2.5"/>
+  <text x="510" y="172" text-anchor="middle" fill="#FCD34D" font-size="9" font-weight="700">CLEANUP</text>
+  <text x="510" y="184" text-anchor="middle" fill="#64748B" font-size="8">return fn()</text>
 
-  <!-- Flecha abajo -->
-  <line x1="155" y1="232" x2="155" y2="256" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- 5. UPDATE (re-render) loop -->
+  <circle cx="620" cy="175" r="28" fill="#1E293B" stroke="#EC4899" stroke-width="2.5"/>
+  <text x="620" y="172" text-anchor="middle" fill="#F9A8D4" font-size="9" font-weight="700">UPDATE</text>
+  <text x="620" y="184" text-anchor="middle" fill="#64748B" font-size="8">setState</text>
 
-  <!-- Re-render -->
-  <rect x="50" y="256" width="210" height="44" fill="#0F172A" rx="6" stroke="#1D4ED8" stroke-width="1"/>
-  <text x="155" y="273" text-anchor="middle" fill="#93C5FD" font-size="11" font-weight="600">Re-render</text>
-  <text x="155" y="289" text-anchor="middle" fill="#64748B" font-size="10">React actualiza el DOM</text>
+  <!-- 6. UNMOUNT -->
+  <circle cx="760" cy="175" r="28" fill="#1E293B" stroke="#EF4444" stroke-width="2.5"/>
+  <text x="760" y="172" text-anchor="middle" fill="#FCA5A5" font-size="9" font-weight="700">UNMOUNT</text>
+  <text x="760" y="184" text-anchor="middle" fill="#64748B" font-size="8">cleanup</text>
 
-  <!-- Nota -->
-  <rect x="50" y="330" width="210" height="50" fill="#172554" rx="6" stroke="#1D4ED8" stroke-width="1"/>
-  <text x="155" y="350" text-anchor="middle" fill="#BFDBFE" font-size="10">⚠️ Nunca mutar directamente</text>
-  <text x="155" y="366" text-anchor="middle" fill="#64748B" font-size="10">count++ no causa re-render</text>
+  <!-- Flecha de bucle UPDATE → RENDER (arco superior) -->
+  <path d="M 648,148 Q 625,90 370,90 Q 210,90 202,148" fill="none" stroke="#EC4899" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <polygon points="202,148 196,138 208,140" fill="#EC4899"/>
+  <text x="425" y="84" text-anchor="middle" fill="#F9A8D4" font-size="9">re-render</text>
 
-  <!-- ======= Col 2: useEffect ======= -->
-  <rect x="325" y="70" width="250" height="400" fill="#1E293B" rx="8" stroke="#334155" stroke-width="1"/>
-  <rect x="325" y="70" width="250" height="36" fill="#334155" rx="8"/>
-  <rect x="325" y="94" width="250" height="12" fill="#334155"/>
-  <text x="450" y="94" text-anchor="middle" fill="#86EFAC" font-size="13" font-weight="700">useEffect</text>
+  <!-- ===== ANOTACIONES DE HOOKS (debajo del eje) ===== -->
 
-  <!-- Montar -->
-  <rect x="345" y="120" width="210" height="44" fill="#0F172A" rx="6" stroke="#15803D" stroke-width="1"/>
-  <text x="450" y="137" text-anchor="middle" fill="#86EFAC" font-size="11" font-weight="600">Montaje</text>
-  <text x="450" y="153" text-anchor="middle" fill="#64748B" font-size="10">[] → ejecuta una vez</text>
+  <!-- useState — activo en MOUNT y RENDER (badge azul) -->
+  <line x1="100" y1="203" x2="100" y2="250" stroke="#3B82F6" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="230" y1="203" x2="230" y2="250" stroke="#3B82F6" stroke-width="1" stroke-dasharray="3,2"/>
+  <rect x="75" y="250" width="180" height="44" rx="8" fill="#172554" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="165" y="267" text-anchor="middle" fill="#93C5FD" font-size="11" font-weight="700">useState</text>
+  <text x="165" y="283" text-anchor="middle" fill="#64748B" font-size="9">const [val, setVal] = useState(init)</text>
+  <text x="165" y="295" text-anchor="middle" fill="#64748B" font-size="9">Dispara re-render al cambiar</text>
 
-  <!-- Flecha -->
-  <line x1="450" y1="164" x2="450" y2="188" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- useRef — persiste de MOUNT a UNMOUNT (barra horizontal inferior) -->
+  <line x1="100" y1="203" x2="100" y2="340" stroke="#F59E0B" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="760" y1="203" x2="760" y2="340" stroke="#F59E0B" stroke-width="1" stroke-dasharray="3,2"/>
+  <rect x="75" y="340" width="710" height="44" rx="8" fill="#1C1917" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="430" y="357" text-anchor="middle" fill="#FCD34D" font-size="11" font-weight="700">useRef — persiste durante todo el ciclo sin causar re-render</text>
+  <text x="430" y="373" text-anchor="middle" fill="#64748B" font-size="9">const ref = useRef(null) → ref.current mutable, sin trigger de render</text>
 
-  <!-- Actualizar -->
-  <rect x="345" y="188" width="210" height="44" fill="#0F172A" rx="6" stroke="#15803D" stroke-width="1"/>
-  <text x="450" y="205" text-anchor="middle" fill="#86EFAC" font-size="11" font-weight="600">Actualización</text>
-  <text x="450" y="221" text-anchor="middle" fill="#64748B" font-size="10">[dep] → cuando dep cambia</text>
+  <!-- useEffect — activo en EFFECT y CLEANUP -->
+  <line x1="370" y1="203" x2="370" y2="250" stroke="#22C55E" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="510" y1="203" x2="510" y2="250" stroke="#22C55E" stroke-width="1" stroke-dasharray="3,2"/>
+  <rect x="290" y="250" width="300" height="44" rx="8" fill="#052e16" stroke="#22C55E" stroke-width="1.5"/>
+  <text x="440" y="267" text-anchor="middle" fill="#86EFAC" font-size="11" font-weight="700">useEffect</text>
+  <text x="440" y="283" text-anchor="middle" fill="#64748B" font-size="9">useEffect(() =&gt; { ... return cleanup }, [deps])</text>
+  <text x="440" y="295" text-anchor="middle" fill="#64748B" font-size="9">Se ejecuta después del paint; cleanup al desmontar</text>
 
-  <!-- Flecha -->
-  <line x1="450" y1="232" x2="450" y2="256" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
-
-  <!-- Cleanup -->
-  <rect x="345" y="256" width="210" height="44" fill="#0F172A" rx="6" stroke="#15803D" stroke-width="1"/>
-  <text x="450" y="273" text-anchor="middle" fill="#86EFAC" font-size="11" font-weight="600">Cleanup (return)</text>
-  <text x="450" y="289" text-anchor="middle" fill="#64748B" font-size="10">() =&gt; clearInterval(id)</text>
-
-  <!-- Flecha -->
-  <line x1="450" y1="300" x2="450" y2="324" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
-
-  <!-- Desmontar -->
-  <rect x="345" y="324" width="210" height="44" fill="#0F172A" rx="6" stroke="#15803D" stroke-width="1"/>
-  <text x="450" y="341" text-anchor="middle" fill="#86EFAC" font-size="11" font-weight="600">Desmontaje</text>
-  <text x="450" y="357" text-anchor="middle" fill="#64748B" font-size="10">Cleanup final ejecutado</text>
-
-  <!-- ======= Col 3: useRef ======= -->
-  <rect x="620" y="70" width="250" height="400" fill="#1E293B" rx="8" stroke="#334155" stroke-width="1"/>
-  <rect x="620" y="70" width="250" height="36" fill="#334155" rx="8"/>
-  <rect x="620" y="94" width="250" height="12" fill="#334155"/>
-  <text x="745" y="94" text-anchor="middle" fill="#FCA5A5" font-size="13" font-weight="700">useRef</text>
-
-  <!-- Caja ref -->
-  <rect x="640" y="120" width="210" height="44" fill="#0F172A" rx="6" stroke="#B91C1C" stroke-width="1"/>
-  <text x="745" y="137" text-anchor="middle" fill="#FCA5A5" font-size="11" font-weight="600">Objeto persistente</text>
-  <text x="745" y="153" text-anchor="middle" fill="#64748B" font-size="10">{ current: null }</text>
-
-  <!-- Flecha -->
-  <line x1="745" y1="164" x2="745" y2="188" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
-
-  <!-- DOM ref -->
-  <rect x="640" y="188" width="210" height="44" fill="#0F172A" rx="6" stroke="#B91C1C" stroke-width="1"/>
-  <text x="745" y="205" text-anchor="middle" fill="#FCA5A5" font-size="11" font-weight="600">Referencia a DOM</text>
-  <text x="745" y="221" text-anchor="middle" fill="#64748B" font-size="10">&lt;input ref={inputRef} /&gt;</text>
-
-  <!-- Flecha -->
-  <line x1="745" y1="232" x2="745" y2="256" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
-
-  <!-- Sin re-render -->
-  <rect x="640" y="256" width="210" height="44" fill="#0F172A" rx="6" stroke="#B91C1C" stroke-width="1"/>
-  <text x="745" y="273" text-anchor="middle" fill="#FCA5A5" font-size="11" font-weight="600">Mutable sin re-render</text>
-  <text x="745" y="289" text-anchor="middle" fill="#64748B" font-size="10">ref.current = intervalId</text>
-
-  <!-- Nota -->
-  <rect x="640" y="330" width="210" height="50" fill="#450A0A" rx="6" stroke="#B91C1C" stroke-width="1"/>
-  <text x="745" y="350" text-anchor="middle" fill="#FECACA" font-size="10">✅ No causa re-render</text>
-  <text x="745" y="366" text-anchor="middle" fill="#64748B" font-size="10">Ideal para timers y DOM</text>
-
-  <!-- ======= Leyenda inferior ======= -->
-  <rect x="30" y="488" width="840" height="22" fill="#1E293B" rx="4"/>
-  <circle cx="80" cy="499" r="5" fill="#93C5FD"/>
-  <text x="92" y="503" fill="#94A3B8" font-size="10">useState — re-render</text>
-  <circle cx="240" cy="499" r="5" fill="#86EFAC"/>
-  <text x="252" y="503" fill="#94A3B8" font-size="10">useEffect — efectos</text>
-  <circle cx="400" cy="499" r="5" fill="#FCA5A5"/>
-  <text x="412" y="503" fill="#94A3B8" font-size="10">useRef — sin re-render</text>
-  <text x="700" y="503" fill="#64748B" font-size="10">© Bootcamp TanStack · Semana 02</text>
-
-  <!-- Marcadores de flecha -->
-  <defs>
-    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L7,3 z" fill="#475569"/>
-    </marker>
-  </defs>
+  <!-- Leyenda superior -->
+  <rect x="60" y="390" width="740" height="22" fill="#1E293B" rx="4"/>
+  <circle cx="100" cy="401" r="4" fill="#3B82F6"/>
+  <text x="110" y="405" fill="#94A3B8" font-size="9">useState</text>
+  <circle cx="180" cy="401" r="4" fill="#22C55E"/>
+  <text x="190" y="405" fill="#94A3B8" font-size="9">useEffect</text>
+  <circle cx="270" cy="401" r="4" fill="#F59E0B"/>
+  <text x="280" y="405" fill="#94A3B8" font-size="9">useRef</text>
+  <circle cx="345" cy="401" r="4" fill="#EC4899"/>
+  <text x="355" y="405" fill="#94A3B8" font-size="9">re-render (setState)</text>
+  <circle cx="475" cy="401" r="4" fill="#EF4444"/>
+  <text x="485" y="405" fill="#94A3B8" font-size="9">unmount + cleanup</text>
+  <text x="780" y="405" fill="#64748B" font-size="9">© Semana 02</text>
 </svg>

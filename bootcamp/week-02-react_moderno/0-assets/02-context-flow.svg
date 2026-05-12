@@ -1,102 +1,106 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500" font-family="Inter, Roboto, system-ui, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 480" width="860" height="480"
+  role="img" aria-label="Flujo de Context API: Provider en raíz, consumidores acceden sin prop drilling" font-family="Inter, Roboto, system-ui, sans-serif">
+
   <!-- Fondo -->
-  <rect width="900" height="500" fill="#0F172A" rx="12"/>
+  <rect width="860" height="480" fill="#0F172A"/>
 
   <!-- Título -->
-  <text x="450" y="38" text-anchor="middle" fill="#F1F5F9" font-size="18" font-weight="700">Context API — Flujo de datos sin prop-drilling</text>
+  <text x="430" y="30" text-anchor="middle" fill="#F1F5F9" font-size="17" font-weight="700">Context API — Flujo de datos sin prop drilling</text>
+  <text x="430" y="48" text-anchor="middle" fill="#64748B" font-size="11">El Provider provee valor; cualquier descendiente puede consumir directamente</text>
 
-  <!-- ======= SIN CONTEXT (izquierda) ======= -->
-  <text x="210" y="72" text-anchor="middle" fill="#EF4444" font-size="13" font-weight="600">❌ Prop-drilling</text>
+  <!-- ===== RAÍZ — App ===== -->
+  <rect x="340" y="60" width="140" height="38" rx="6" fill="#1E293B" stroke="#64748B" stroke-width="1.5"/>
+  <text x="410" y="82" text-anchor="middle" fill="#94A3B8" font-size="11" font-weight="700">&lt;App /&gt;</text>
 
-  <!-- App -->
-  <rect x="160" y="82" width="100" height="36" fill="#1E293B" rx="6" stroke="#334155" stroke-width="1"/>
-  <text x="210" y="105" text-anchor="middle" fill="#F1F5F9" font-size="11">App</text>
+  <!-- Línea App → ThemeProvider -->
+  <line x1="410" y1="98" x2="410" y2="118" stroke="#334155" stroke-width="1.5"/>
 
-  <!-- Flecha con prop -->
-  <line x1="210" y1="118" x2="210" y2="145" stroke="#EF4444" stroke-width="1.5" marker-end="url(#arrowRed)"/>
-  <text x="225" y="138" fill="#EF4444" font-size="9">theme</text>
+  <!-- ===== PROVIDER (hexágono) ===== -->
+  <!-- Hexágono centrado en 410,150, radio ~42 -->
+  <polygon points="410,108 452,131 452,177 410,200 368,177 368,131" fill="#172554" stroke="#3B82F6" stroke-width="2.5"/>
+  <text x="410" y="148" text-anchor="middle" fill="#93C5FD" font-size="10" font-weight="700">ThemeContext</text>
+  <text x="410" y="162" text-anchor="middle" fill="#3B82F6" font-size="9">.Provider</text>
+  <text x="410" y="176" text-anchor="middle" fill="#64748B" font-size="8">value={{ theme, setTheme }}</text>
 
-  <!-- Layout -->
-  <rect x="145" y="145" width="130" height="36" fill="#1E293B" rx="6" stroke="#334155" stroke-width="1"/>
-  <text x="210" y="168" text-anchor="middle" fill="#F1F5F9" font-size="11">Layout</text>
+  <!-- ===== RAMA IZQUIERDA — Sidebar ===== -->
+  <!-- Línea Provider → Sidebar -->
+  <path d="M 368,154 Q 240,154 200,200" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <polygon points="200,200 192,191 204,193" fill="#64748B"/>
 
-  <!-- Flecha con prop -->
-  <line x1="210" y1="181" x2="210" y2="208" stroke="#EF4444" stroke-width="1.5" marker-end="url(#arrowRed)"/>
-  <text x="225" y="200" fill="#EF4444" font-size="9">theme</text>
+  <!-- Nodo Sidebar -->
+  <rect x="134" y="200" width="132" height="36" rx="6" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+  <text x="200" y="222" text-anchor="middle" fill="#94A3B8" font-size="11">&lt;Sidebar /&gt;</text>
 
-  <!-- Sidebar -->
-  <rect x="130" y="208" width="160" height="36" fill="#1E293B" rx="6" stroke="#334155" stroke-width="1"/>
-  <text x="210" y="231" text-anchor="middle" fill="#F1F5F9" font-size="11">Sidebar</text>
+  <!-- Sidebar → ThemeToggle -->
+  <line x1="160" y1="236" x2="130" y2="270" stroke="#334155" stroke-width="1.5"/>
+  <!-- Sidebar → NavMenu -->
+  <line x1="240" y1="236" x2="270" y2="270" stroke="#334155" stroke-width="1.5"/>
 
-  <!-- Flecha con prop -->
-  <line x1="210" y1="244" x2="210" y2="271" stroke="#EF4444" stroke-width="1.5" marker-end="url(#arrowRed)"/>
-  <text x="225" y="263" fill="#EF4444" font-size="9">theme</text>
+  <rect x="74" y="270" width="112" height="34" rx="6" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+  <text x="130" y="291" text-anchor="middle" fill="#94A3B8" font-size="10">&lt;ThemeToggle /&gt;</text>
 
-  <!-- ThemeButton -->
-  <rect x="115" y="271" width="190" height="36" fill="#1E293B" rx="6" stroke="#EF4444" stroke-width="1"/>
-  <text x="210" y="294" text-anchor="middle" fill="#FCA5A5" font-size="11">ThemeButton 🎯</text>
+  <rect x="200" y="270" width="100" height="34" rx="6" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+  <text x="250" y="291" text-anchor="middle" fill="#94A3B8" font-size="10">&lt;NavMenu /&gt;</text>
 
-  <text x="210" y="340" text-anchor="middle" fill="#64748B" font-size="10">prop pasada por 3 niveles</text>
-  <text x="210" y="355" text-anchor="middle" fill="#64748B" font-size="10">aunque Layout y Sidebar</text>
-  <text x="210" y="370" text-anchor="middle" fill="#64748B" font-size="10">no necesitan theme</text>
+  <!-- ThemeToggle usa useTheme() — flecha curva de consumo -->
+  <path d="M 130,270 Q 80,220 200,190" fill="none" stroke="#3B82F6" stroke-width="2" stroke-dasharray="5,3"/>
+  <polygon points="200,190 190,184 196,196" fill="#3B82F6"/>
+  <text x="85" y="228" text-anchor="middle" fill="#93C5FD" font-size="8" transform="rotate(-38,85,228)">useTheme()</text>
 
-  <!-- ======= DIVISOR ======= -->
-  <line x1="440" y1="70" x2="440" y2="430" stroke="#334155" stroke-width="1" stroke-dasharray="4,4"/>
+  <!-- ===== RAMA CENTRAL — Main ===== -->
+  <line x1="410" y1="200" x2="410" y2="240" stroke="#334155" stroke-width="1.5"/>
+  <rect x="340" y="240" width="140" height="36" rx="6" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+  <text x="410" y="262" text-anchor="middle" fill="#94A3B8" font-size="11">&lt;Main /&gt;</text>
 
-  <!-- ======= CON CONTEXT (derecha) ======= -->
-  <text x="670" y="72" text-anchor="middle" fill="#22C55E" font-size="13" font-weight="600">✅ Context API</text>
+  <!-- Main → Header, Main → Article -->
+  <line x1="380" y1="276" x2="340" y2="310" stroke="#334155" stroke-width="1.5"/>
+  <line x1="440" y1="276" x2="480" y2="310" stroke="#334155" stroke-width="1.5"/>
 
-  <!-- ThemeProvider envuelve todo -->
-  <rect x="490" y="82" width="370" height="310" fill="#0F172A" rx="8" stroke="#166534" stroke-width="1.5" stroke-dasharray="6,3"/>
-  <text x="675" y="100" text-anchor="middle" fill="#86EFAC" font-size="10" font-weight="600">ThemeProvider</text>
+  <rect x="272" y="310" width="112" height="34" rx="6" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+  <text x="328" y="331" text-anchor="middle" fill="#94A3B8" font-size="10">&lt;Header /&gt;</text>
 
-  <!-- App -->
-  <rect x="615" y="110" width="120" height="36" fill="#1E293B" rx="6" stroke="#334155" stroke-width="1"/>
-  <text x="675" y="133" text-anchor="middle" fill="#F1F5F9" font-size="11">App</text>
+  <rect x="428" y="310" width="104" height="34" rx="6" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+  <text x="480" y="331" text-anchor="middle" fill="#94A3B8" font-size="10">&lt;Article /&gt;</text>
 
-  <!-- Flecha normal (sin prop) -->
-  <line x1="675" y1="146" x2="675" y2="170" stroke="#334155" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <!-- Header usa useTheme() — flecha de consumo -->
+  <path d="M 328,310 Q 310,240 368,185" fill="none" stroke="#3B82F6" stroke-width="2" stroke-dasharray="5,3"/>
+  <polygon points="368,185 360,175 372,178" fill="#3B82F6"/>
+  <text x="305" y="248" text-anchor="middle" fill="#93C5FD" font-size="8" transform="rotate(-72,305,248)">useTheme()</text>
 
-  <!-- Layout -->
-  <rect x="600" y="170" width="150" height="36" fill="#1E293B" rx="6" stroke="#334155" stroke-width="1"/>
-  <text x="675" y="193" text-anchor="middle" fill="#F1F5F9" font-size="11">Layout</text>
+  <!-- ===== RAMA DERECHA — Widget ===== -->
+  <path d="M 452,154 Q 580,154 620,200" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <polygon points="620,200 614,189 626,191" fill="#64748B"/>
 
-  <!-- Flecha normal -->
-  <line x1="675" y1="206" x2="675" y2="230" stroke="#334155" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <rect x="555" y="200" width="130" height="36" rx="6" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+  <text x="620" y="222" text-anchor="middle" fill="#94A3B8" font-size="11">&lt;Widget /&gt;</text>
 
-  <!-- Sidebar -->
-  <rect x="585" y="230" width="180" height="36" fill="#1E293B" rx="6" stroke="#334155" stroke-width="1"/>
-  <text x="675" y="253" text-anchor="middle" fill="#F1F5F9" font-size="11">Sidebar</text>
+  <line x1="620" y1="236" x2="620" y2="270" stroke="#334155" stroke-width="1.5"/>
+  <rect x="555" y="270" width="130" height="34" rx="6" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+  <text x="620" y="291" text-anchor="middle" fill="#94A3B8" font-size="10">&lt;DarkModeBtn /&gt;</text>
 
-  <!-- Flecha normal -->
-  <line x1="675" y1="266" x2="675" y2="290" stroke="#334155" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <!-- DarkModeBtn usa useTheme() -->
+  <path d="M 620,270 Q 680,200 452,162" fill="none" stroke="#3B82F6" stroke-width="2" stroke-dasharray="5,3"/>
+  <polygon points="452,162 444,154 456,155" fill="#3B82F6"/>
+  <text x="672" y="215" text-anchor="middle" fill="#93C5FD" font-size="8" transform="rotate(38,672,215)">useTheme()</text>
 
-  <!-- ThemeButton accede directo -->
-  <rect x="570" y="290" width="210" height="36" fill="#1E293B" rx="6" stroke="#22C55E" stroke-width="1"/>
-  <text x="675" y="313" text-anchor="middle" fill="#86EFAC" font-size="11">ThemeButton 🎯</text>
+  <!-- ===== CALLOUT — sin prop drilling ===== -->
+  <rect x="60" y="354" width="360" height="56" rx="8" fill="#0C1A0C" stroke="#22C55E" stroke-width="1.5"/>
+  <text x="240" y="374" text-anchor="middle" fill="#86EFAC" font-size="11" font-weight="700">✓ Con Context API</text>
+  <text x="240" y="390" text-anchor="middle" fill="#64748B" font-size="9">App → ThemeProvider → cualquier consumidor</text>
+  <text x="240" y="404" text-anchor="middle" fill="#64748B" font-size="9">sin pasar props manualmente por cada nivel</text>
 
-  <!-- Línea desde context al botón -->
-  <line x1="545" y1="196" x2="545" y2="308" stroke="#22C55E" stroke-width="1.5" stroke-dasharray="4,2"/>
-  <line x1="545" y1="308" x2="570" y2="308" stroke="#22C55E" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
-  <text x="510" y="255" fill="#86EFAC" font-size="9" transform="rotate(-90,510,255)">useTheme()</text>
+  <rect x="444" y="354" width="360" height="56" rx="8" fill="#1A0C0C" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="624" y="374" text-anchor="middle" fill="#FCA5A5" font-size="11" font-weight="700">✗ Sin Context API</text>
+  <text x="624" y="390" text-anchor="middle" fill="#64748B" font-size="9">App → Sidebar → ThemeToggle (theme, setTheme)</text>
+  <text x="624" y="404" text-anchor="middle" fill="#64748B" font-size="9">prop drilling: cada nivel re-pasa las props</text>
 
-  <text x="675" y="356" text-anchor="middle" fill="#64748B" font-size="10">ThemeButton consume el contexto</text>
-  <text x="675" y="371" text-anchor="middle" fill="#64748B" font-size="10">directamente con useTheme()</text>
-
-  <!-- ======= Leyenda inferior ======= -->
-  <rect x="30" y="450" width="840" height="38" fill="#1E293B" rx="4"/>
-  <text x="450" y="463" text-anchor="middle" fill="#94A3B8" font-size="10" font-weight="600">Patrón Context API: createContext → Provider → useContext hook con null guard</text>
-  <text x="450" y="479" text-anchor="middle" fill="#64748B" font-size="10">Memorizar el value del Provider con useMemo para evitar re-renders globales</text>
-
-  <defs>
-    <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L7,3 z" fill="#EF4444"/>
-    </marker>
-    <marker id="arrowGray" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L7,3 z" fill="#475569"/>
-    </marker>
-    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L7,3 z" fill="#22C55E"/>
-    </marker>
-  </defs>
+  <!-- Leyenda -->
+  <rect x="60" y="424" width="740" height="22" fill="#1E293B" rx="4"/>
+  <line x1="80" y1="435" x2="120" y2="435" stroke="#3B82F6" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="128" y="439" fill="#94A3B8" font-size="9">useTheme() — acceso directo al contexto</text>
+  <line x1="310" y1="435" x2="350" y2="435" stroke="#334155" stroke-width="1.5"/>
+  <text x="358" y="439" fill="#94A3B8" font-size="9">árbol de componentes (render)</text>
+  <polygon points="558,435 548,430 548,440" fill="#172554" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="566" y="439" fill="#93C5FD" font-size="9">Provider (hexágono)</text>
+  <text x="770" y="439" fill="#64748B" font-size="9">© Semana 02</text>
 </svg>
