@@ -693,16 +693,16 @@ impact — footer: BREAKING CHANGE: ..., Closes #N, Refs #N
 
 ### Types
 
-| Type | Cuándo usarlo |
-|------|---------------|
-| `feat` | Nuevo contenido, ejercicio, semana |
-| `fix` | Corrección de código en ejercicio o solución |
-| `docs` | README, teoría, documentación |
-| `chore` | Configuración, tooling, scripts |
-| `test` | Añadir o actualizar tests |
-| `refactor` | Restructurar sin cambiar comportamiento |
-| `ci` | Pipeline CI/CD |
-| `perf` | Mejora de rendimiento |
+| Type       | Cuándo usarlo                                |
+| ---------- | -------------------------------------------- |
+| `feat`     | Nuevo contenido, ejercicio, semana           |
+| `fix`      | Corrección de código en ejercicio o solución |
+| `docs`     | README, teoría, documentación                |
+| `chore`    | Configuración, tooling, scripts              |
+| `test`     | Añadir o actualizar tests                    |
+| `refactor` | Restructurar sin cambiar comportamiento      |
+| `ci`       | Pipeline CI/CD                               |
+| `perf`     | Mejora de rendimiento                        |
 
 ### Scopes
 

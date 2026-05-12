@@ -1,0 +1,75 @@
+<svg width="860" height="220" viewBox="0 0 860 220"
+  xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bootcamp TanStack — De Cero a Héroe">
+
+  <!-- Background -->
+  <rect width="860" height="220" fill="#0F172A"/>
+
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="860" height="3" fill="#FF4154"/>
+
+  <!-- Left accent bar -->
+  <rect x="40" y="34" width="3" height="76" fill="#FF4154"/>
+
+  <!-- Title: Bootcamp -->
+  <text x="58" y="82" font-family="'Inter', 'Roboto', 'Segoe UI', system-ui, sans-serif" font-size="46" font-weight="800" fill="#F1F5F9" letter-spacing="-1">Bootcamp</text>
+
+  <!-- Title: TanStack -->
+  <text x="300" y="82" font-family="'Inter', 'Roboto', 'Segoe UI', system-ui, sans-serif" font-size="46" font-weight="800" fill="#FF4154" letter-spacing="-1">TanStack</text>
+
+  <!-- Tagline -->
+  <text x="58" y="108" font-family="'Inter', 'Roboto', system-ui, sans-serif" font-size="13" font-weight="400" fill="#475569" letter-spacing="2.5">
+    DE CERO A HERO  ·  TYPESCRIPT 5  ·  REACT 19  ·  VITE 6
+  </text>
+
+  <!-- Right block: exit level -->
+  <text x="820" y="57" text-anchor="end" font-family="system-ui, sans-serif" font-size="10" font-weight="500" fill="#475569" letter-spacing="1.5">NIVEL DE SALIDA</text>
+  <text x="820" y="78" text-anchor="end" font-family="system-ui, sans-serif" font-size="19" font-weight="700" fill="#F1F5F9">TanStack</text>
+  <text x="820" y="100" text-anchor="end" font-family="system-ui, sans-serif" font-size="19" font-weight="700" fill="#FF4154">Developer Jr</text>
+
+  <!-- Divider -->
+  <line x1="40" y1="120" x2="820" y2="120" stroke="#1E293B" stroke-width="1"/>
+
+  <!-- Library pills -->
+
+  <!-- TanStack Query #FF4154 -->
+  <rect x="40" y="134" width="108" height="26" rx="4" fill="#FF4154" fill-opacity="0.1"/>
+  <rect x="40" y="134" width="108" height="26" rx="4" fill="none" stroke="#FF4154" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="94" y="152" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FF4154">Query v5</text>
+
+  <!-- TanStack Router #3B82F6 -->
+  <rect x="156" y="134" width="110" height="26" rx="4" fill="#3B82F6" fill-opacity="0.1"/>
+  <rect x="156" y="134" width="110" height="26" rx="4" fill="none" stroke="#3B82F6" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="211" y="152" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#3B82F6">Router v1</text>
+
+  <!-- TanStack Table #10B981 -->
+  <rect x="274" y="134" width="106" height="26" rx="4" fill="#10B981" fill-opacity="0.1"/>
+  <rect x="274" y="134" width="106" height="26" rx="4" fill="none" stroke="#10B981" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="327" y="152" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#10B981">Table v8</text>
+
+  <!-- TanStack Form #F59E0B -->
+  <rect x="388" y="134" width="100" height="26" rx="4" fill="#F59E0B" fill-opacity="0.1"/>
+  <rect x="388" y="134" width="100" height="26" rx="4" fill="none" stroke="#F59E0B" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="438" y="152" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#F59E0B">Form v1</text>
+
+  <!-- TanStack Virtual #8B5CF6 -->
+  <rect x="496" y="134" width="112" height="26" rx="4" fill="#8B5CF6" fill-opacity="0.1"/>
+  <rect x="496" y="134" width="112" height="26" rx="4" fill="none" stroke="#8B5CF6" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="552" y="152" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#8B5CF6">Virtual v3</text>
+
+  <!-- TanStack Start #EC4899 -->
+  <rect x="616" y="134" width="106" height="26" rx="4" fill="#EC4899" fill-opacity="0.1"/>
+  <rect x="616" y="134" width="106" height="26" rx="4" fill="none" stroke="#EC4899" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="669" y="152" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#EC4899">Start v1</text>
+
+  <!-- Vitest (neutral) -->
+  <rect x="730" y="134" width="90" height="26" rx="4" fill="#1E293B"/>
+  <text x="775" y="152" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#6EE7B7">Vitest v3</text>
+
+  <!-- Bottom strip -->
+  <rect x="0" y="185" width="860" height="35" fill="#060F1E"/>
+  <text x="40" y="207" font-family="system-ui, sans-serif" font-size="11.5" fill="#334155">
+    24 semanas  ·  192 horas  ·  pnpm exclusivo  ·  TypeScript strict  ·  Zod  ·  MSW
+  </text>
+  <text x="820" y="207" text-anchor="end" font-family="system-ui, sans-serif" font-size="11.5" fill="#334155">ergrato-dev/bc-tanstack</text>
+
+</svg>
