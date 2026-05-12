@@ -1,0 +1,71 @@
+{
+  "name": "BC TanStack — Entorno de Desarrollo",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      // Versión exacta de pnpm — actualizar explícitamente cuando sea necesario
+      "PNPM_VERSION": "9.15.4"
+    }
+  },
+
+  // Configurar pnpm con versiones exactas al crear el contenedor
+  "postCreateCommand": "pnpm config set save-exact true --global && git config commit.template .gitmessage",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // TypeScript y linting
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        // Testing
+        "vitest.explorer",
+        // Git
+        "eamodio.gitlens",
+        // Copilot
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        // TanStack Router — resaltado de file-based routing
+        "ms-vscode.vscode-json"
+      ],
+      "settings": {
+        // Formatear al guardar con Prettier
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        // ESLint corrige automáticamente al guardar
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": "explicit"
+        },
+        // pnpm como gestor de paquetes en el explorador de npm de VS Code
+        "npm.packageManager": "pnpm",
+        // Imports relativos siempre con @/ alias
+        "typescript.preferences.importModuleSpecifier": "non-relative",
+        // Mostrar errores de TypeScript inline
+        "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+        "typescript.inlayHints.parameterNames.enabled": "literals"
+      }
+    }
+  },
+
+  // Puertos reenviados al host
+  // 5173: Vite dev server (semanas 01–20)
+  // 4173: Vite preview (pnpm preview)
+  // 3000: TanStack Start SSR server (semanas 21–22)
+  "forwardPorts": [5173, 4173, 3000],
+  "portsAttributes": {
+    "5173": {
+      "label": "Vite Dev Server",
+      "onAutoForward": "openBrowser"
+    },
+    "4173": {
+      "label": "Vite Preview",
+      "onAutoForward": "notify"
+    },
+    "3000": {
+      "label": "TanStack Start (sem. 21-22)",
+      "onAutoForward": "notify"
+    }
+  },
+
+  // Ejecutar como el usuario no-root que provee la imagen base de Microsoft
+  "remoteUser": "node"
+}
