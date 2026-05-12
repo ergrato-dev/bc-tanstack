@@ -1,14 +1,15 @@
-# Semana 04 — Query — Fundamentos
+# Semana 04 — TanStack Query: Fundamentos
 
-> **Temas**: Server state vs client state · useQuery · QueryClient
+> **Temas**: Server state · `useQuery` · `QueryClient` · `QueryClientProvider`
 
 ## 🎯 Objetivos
 
 Al finalizar esta semana, el estudiante será capaz de:
 
-1. *(por definir)*
-2. *(por definir)*
-3. *(por definir)*
+1. Distinguir server state de client state y justificar por qué necesita una librería dedicada.
+2. Configurar `QueryClient` y `QueryClientProvider` en una app React.
+3. Ejecutar su primera query con `useQuery` y manejar los estados `isLoading`, `isError` e `isSuccess`.
+4. Instalar y usar TanStack Query DevTools para inspeccionar el cache.
 
 ## ⏱️ Distribución del Tiempo (8h)
 
@@ -22,12 +23,18 @@ Al finalizar esta semana, el estudiante será capaz de:
 
 ```
 week-04-query_fundamentos/
-├── 0-assets/          # Diagramas SVG
-├── 1-teoria/          # Material teórico (.md numerados)
-├── 2-practicas/       # Ejercicios guiados (starter + solution)
-├── 3-proyecto/        # Proyecto semanal integrador
-├── 4-recursos/        # Videografía y webgrafía
-├── 5-glosario/        # Términos clave A-Z
+├── 0-assets/
+│   └── 01-query-data-flow.svg     # Flujo de datos: componente → cache → API
+├── 1-teoria/
+│   ├── 01-server-state.md         # Server state vs client state + instalación
+│   ├── 02-queryclient-provider.md # QueryClient, QueryClientProvider, DevTools
+│   └── 03-usequery.md             # useQuery: anatomía, estados, TypeScript
+├── 2-practicas/
+│   ├── ejercicio-01/              # Setup QueryClient + DevTools
+│   └── ejercicio-02/              # Primer useQuery con API real
+├── 3-proyecto/                    # App de lista + detalle con useQuery
+├── 4-recursos/                    # Videografía y webgrafía
+├── 5-glosario/                    # Términos clave A-Z
 └── rubrica-evaluacion.md
 ```
 
