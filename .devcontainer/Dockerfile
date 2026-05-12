@@ -1,5 +1,5 @@
-# Imagen base oficial de Microsoft para Node.js 22 LTS (Debian Bookworm)
-FROM mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm
+# Imagen base oficial de Microsoft para Node.js 22 LTS (Alpine — imagen ligera)
+FROM mcr.microsoft.com/devcontainers/javascript-node:1-22-alpine
 
 # ── pnpm — gestor de paquetes exclusivo del bootcamp ─────────────────────────
 # Se instala vía corepack (incluido en Node 22) para no depender de npm install
