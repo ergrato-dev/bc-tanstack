@@ -1,12 +1,12 @@
 # 01 — Tipos e Interfaces en TypeScript
 
-> Referencia visual: [typescript-type-system.svg](../0-assets/typescript-type-system.svg)
-
 ## 🎯 Objetivos
 
 1. Distinguir entre `type`, `interface` y tipos primitivos
 2. Modelar datos con interfaces y decidir cuándo usar `type` alias
 3. Escribir código con `strict: true` sin recurrir a `any`
+
+![Sistema de tipos TypeScript — Niveles 1 y 2: primitivos, interface vs type alias](../0-assets/01-typescript-type-system.svg)
 
 ---
 

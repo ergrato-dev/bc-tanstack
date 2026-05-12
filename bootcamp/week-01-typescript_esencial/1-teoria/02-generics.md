@@ -1,12 +1,12 @@
 # 02 — Generics en TypeScript
 
-> Referencia visual: [typescript-type-system.svg](../0-assets/typescript-type-system.svg)
-
 ## 🎯 Objetivos
 
 1. Escribir funciones genéricas que funcionen con cualquier tipo sin perder seguridad
 2. Aplicar restricciones con `extends` para limitar los tipos aceptados
 3. Crear tipos genéricos para modelar respuestas de API
+
+![Sistema de tipos TypeScript — Nivel 3: generics y utility types](../0-assets/01-typescript-type-system.svg)
 
 ---
 

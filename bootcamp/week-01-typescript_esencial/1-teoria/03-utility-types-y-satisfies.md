@@ -1,12 +1,12 @@
 # 03 — Utility Types y `satisfies`
 
-> Referencia visual: [typescript-type-system.svg](../0-assets/typescript-type-system.svg)
-
 ## 🎯 Objetivos
 
 1. Derivar nuevos tipos a partir de existentes con utility types
 2. Evitar duplicación de tipos usando `Pick`, `Omit` y `Partial`
 3. Aplicar `satisfies` para validar objetos de configuración sin perder su tipo inferido
+
+![Sistema de tipos TypeScript — Niveles 3 y 4: utility types y satisfies](../0-assets/01-typescript-type-system.svg)
 
 ---
 
