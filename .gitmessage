@@ -1,0 +1,20 @@
+# type(scope): what — subject (imperative mood, ≤ 72 chars, no period)
+# ─────────────────────────────────────────────────────────────────────────────
+# Types : feat | fix | docs | chore | test | refactor | ci | perf
+# Scopes: week-XX | docs | config | global
+#
+# Examples:
+#   feat(week-04): add useInfiniteQuery exercise with scroll
+#   fix(week-07): correct staleTime value in solution
+#   docs(week-01): add generics section to TypeScript theory
+#   chore(config): add vitest coverage thresholds
+# ─────────────────────────────────────────────────────────────────────────────
+
+
+# for? — WHY: motivation, context, problem solved (wrap at 72 chars)
+# ─────────────────────────────────────────────────────────────────────────────
+
+
+# impact? — BREAKING CHANGE: ..., Closes #N, Refs #N
+# ─────────────────────────────────────────────────────────────────────────────
+
